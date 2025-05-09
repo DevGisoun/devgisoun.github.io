@@ -63,7 +63,7 @@ __config.yml 설정이 반영된 블로그_
    ```bash
    $ bundle lock --add-platform x86_64-linux
    ```
-2. VSCode에서 <kbd>Ctrl + Shift + G</kbd> 단축키를 입력하여 '소스 제어'로 이동 후 변경 사항을 반영할 파일들을 추가하고 커밋 및 푸쉬를 해줍니다.
+2. VSCode에서 <kbd>Ctrl + Shift + G</kbd> 단축키를 입력하여 '소스 제어'로 이동 후 변경 사항을 반영할 파일들을 추가하고 <kbd>커밋</kbd>과 <kbd>변경 내용 동기화</kbd> 버튼을 클릭하여 커밋 및 푸쉬를 해줍니다.
    
    ![image](git-source-control.png)
    _소스 제어_
