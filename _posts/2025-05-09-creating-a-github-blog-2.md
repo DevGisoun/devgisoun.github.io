@@ -12,6 +12,9 @@ pin: false
 media_subpath: '/assets/posts/20250509'
 ---
 
+# 이전 포스팅
+[**매우 쉬운 Chirpy 테마 Github 블로그 만들기 ① - Jekyll Chirpy 테마 적용**](https://devgisoun.github.io/posts/creating-a-github-blog-1/)  
+
 ## 로컬 서버 실행
 
 1. VSCode에서 <kbd>Ctrl + `</kbd> 단축키를 입력하여 터미널을 열어주세요.

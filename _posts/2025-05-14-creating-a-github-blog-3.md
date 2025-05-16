@@ -12,6 +12,10 @@ pin: false
 media_subpath: '/assets/posts/20250514'
 ---
 
+# 이전 포스팅
+[**매우 쉬운 Chirpy 테마 Github 블로그 만들기 ① - Jekyll Chirpy 테마 적용**](https://devgisoun.github.io/posts/creating-a-github-blog-1/)  
+[**매우 쉬운 Chirpy 테마 Github 블로그 만들기 ② - 로컬 서버 실행과 빌드 및 배포**](https://devgisoun.github.io/posts/creating-a-github-blog-2/)  
+
 ## 게시글 파일 생성 및 기본 구조
 
 새로운 게시글을 작성하려면 블로그 리포지토리 최상위 경로에 위치한 **`_posts`** 폴더에 Markdown(**`'md`**) 파일을 생성해야 합니다. 파일명은 아래와 같은 규칙을 따릅니다.
