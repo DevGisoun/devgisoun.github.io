@@ -4,8 +4,8 @@ description: >-
   이번 포스팅에서는 임시 작업에 사용된 폴더 및 파일을 Git의 추적 대상에서 제외하고 앞으로 Git이 해당 파일들을 무시하도록 설정하는 방법을 설명하도록 하겠습니다.
 author: gisoun
 date: 2025-05-16 21:23:00 +0900
-categories: [Blog]
-tags: [blog, github pages, jekyll, chirpy]
+categories: [Git]
+tags: [git, github]
 pin: false
 media_subpath: '/assets/posts/20250516'
 ---
