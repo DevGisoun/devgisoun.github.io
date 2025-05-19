@@ -4,8 +4,8 @@ description: >-
   정적인 블로그는 빠르고 안정적이라는 장점이 있지만, 독자와의 소통이라는 측면에서는 아쉬움이 있습니다. 특히 Jekyll 기반으로 GitHub Pages에 호스팅하는 블로그에서는 별도의 솔루션 없이 동적인 기능인 댓글을 자체적으로 구현하기는 어렵습니다. 때문에 이번 포스팅에서는 Jekyll 기반의 Github 블로그에 Giscus를 이용하여 간단하고 효과적으로 댓글 기능을 추가하는 방법을 설명하도록 하겠습니다.
 author: gisoun
 date: 2025-05-18 14:39:00 +0900
-categories: [Git]
-tags: [git, github]
+categories: [Blog]
+tags: [blog, github pages, jekyll, chirpy]
 pin: false
 media_subpath: '/assets/posts/20250518'
 comments: true
