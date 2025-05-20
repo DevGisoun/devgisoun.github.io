@@ -104,7 +104,9 @@ _저장소_
 ![image](giscus-config-3.png)
 _페이지 ↔️ Discussions 연결_
 
-**`Discussion 카테고리`**에서는 댓글 Discussion이 생성되고 관리될 원하시는 Discussions 카테고리를 선택해 주시면 됩니다. 저는 **Comments**라는 별도의 카테고리를 Github Discussion 페이지에서 생성하였고 이를 선택했습니다.
+**`Discussion 카테고리`**에서는 댓글 Discussion이 생성되고 관리될 원하시는 Discussions 카테고리를 선택해 주시면 됩니다. 저는 **Comments**라는 별도의 카테고리를 Github Discussion 페이지에서 생성하였고 이를 선택했습니다.  
+
+새 Discussion 카테고리를 생성하는 방법은 [**이곳**](https://devgisoun.github.io/posts/create-a-new-discussion/)을 참고해 주세요.
 
 ![image](giscus-config-4.png)
 _Discussion 카테고리_
