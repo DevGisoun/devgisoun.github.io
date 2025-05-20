@@ -1,5 +1,5 @@
 ---
-title: Github 리포지토리의 Discussions 카테고리 추가
+title: Github 리포지토리의 Discussion 카테고리 추가
 description: >-
   
 author: gisoun
@@ -17,7 +17,7 @@ comments: true
 
 ---
 
-## Discussions 카테고리 추가
+## Discussion 카테고리 추가
 
 <kbd>Discussions</kbd> 탭 내에 좌측을 보시면 **Categories** 부분에 ✏️ 아이콘이 있습니다.
 
@@ -45,23 +45,23 @@ _Create category 페이지_
   - **`Poll`:** 투표를 생성하고 결과를 확인할 수 있는 형식
 - **`Add this category to a section (optional)`:** 생성하려는 카테고리를 기존의 섹션에 포함시킬지 여부를 결정합니다. 필수는 아닙니다.
 
-저의 경우 블로그 내 댓글 기능을 적용하기 위해 **Giscus** 를 사용했는데, 댓글이 관리될 별도의 Discussion을 아래와 같이 구성하였습니다.
+저의 경우 블로그 내 댓글 기능을 적용하기 위해 **Giscus** 를 사용했는데, 댓글이 관리될 별도의 Discussion 카테고리를 아래와 같이 구성하였습니다.
 
 ![image](create-category-2.png)
 _Create category 페이지_
 
 입력란을 모두 작성하였다면 <kbd>Create</kbd> 버튼을 클릭하여 생성해 주세요.
 
-![image](comments-discussion.png)
-_생성된 'Comments' Discussion_
+![image](comments-category.png)
+_생성된 'Comments' 카테고리_
 
-성공적으로 **`Comments`** Discussion이 생성된 것을 확인할 수 있습니다!
+성공적으로 **`Comments`** Discussion 카테고리가 생성된 것을 확인할 수 있습니다!
 
 ---
 
 ## 마무리
 
-사실 저는 Github의 <kbd>Discussions</kbd> 탭을 적극 활용할 생각은 없었는데, 최근에 **Giscus** 를 사용하여 블로그 내 댓글 기능을 설정하다 보니 댓글들을 관리할 별도의 Discussion가 필요성을 느껴 이를 생성하였고 **블로그에 내용을 공유하면 좋겠다** 싶어서 이번 포스팅을 작성하게 되었습니다!  
+사실 저는 Github의 <kbd>Discussions</kbd> 탭을 적극 활용할 생각은 없었는데, 최근에 **Giscus** 를 사용하여 블로그 내 댓글 기능을 설정하다 보니 댓글들을 관리할 별도의 카테고리를 생성할 필요성을 느꼈고 **이 내용을 블로그에 공유하면 좋겠다** 싶어서 이번 포스팅을 작성하게 되었습니다!  
 
 많은 분께 도움이 되었으면 좋겠습니다.  
 
