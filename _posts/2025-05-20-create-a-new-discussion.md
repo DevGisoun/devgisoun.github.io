@@ -13,7 +13,7 @@ comments: true
 
 ## 사전 준비
 
-만약 리포지토리의 <kbd>Discussions</kbd> 탭이 활성화 되어 있지 않아 보이지 않는다면 [**이곳**](https://devgisoun.github.io/posts/jekyll-github-blog-comments-giscus/#github-%EB%A6%AC%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-discussions-%ED%83%AD-%ED%99%9C%EC%84%B1%ED%99%94)을 참고해 주세요.
+먼저 리포지토리에 <kbd>Discussions</kbd> 탭이 활성화되어 있어야 합니다. 만약 리포지토리의 <kbd>Discussions</kbd> 탭이 활성화 되어 있지 않아 보이지 않는다면 [**이곳**](https://devgisoun.github.io/posts/jekyll-github-blog-comments-giscus/#github-%EB%A6%AC%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-discussions-%ED%83%AD-%ED%99%9C%EC%84%B1%ED%99%94)을 참고해 주세요.
 
 ---
 
