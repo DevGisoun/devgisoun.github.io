@@ -52,7 +52,7 @@ comments: true
 
 ## Giscus 설치
 
-### 1. GitHub 리포지토리에 Discussions 기능 활성화
+### GitHub 리포지토리 Discussions 탭 활성화
 
 먼저 블로그 리포지토리 페이지로 이동하여, <kbd>Settings</kbd> 탭을 클릭해 주세요.
 
@@ -69,7 +69,7 @@ _'Discussions' 체크박스 활성화_
 ![image](discussions-tab.png)
 _블로그 리포지토리의 'Discussions' 탭_
 
-### 2. Giscus GitHub App 설치
+### Giscus GitHub App 설치
 
 [Giscus 앱 설치 페이지](https://github.com/apps/giscus)로 이동하여 <kbd>Install</kbd> 버튼을 클릭해 주세요.
 
@@ -81,7 +81,7 @@ _Giscus 앱 설치 페이지_
 ![image](giscus-app-install-2.png)
 _Giscus 앱 설치 페이지_
 
-### 3. Giscus 설정 및 코드 생성
+### Giscus 설정 및 코드 생성
 
 [Giscus 설정 사이트](https://giscus.app/ko)로 이동해 주세요.  
 
