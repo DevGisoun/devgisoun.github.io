@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Dev. Gisoun # the main title.
 
-tagline: 개발자 기순 블로그 # it will display as the subtitle
+tagline: 기순의 개발 블로그 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
