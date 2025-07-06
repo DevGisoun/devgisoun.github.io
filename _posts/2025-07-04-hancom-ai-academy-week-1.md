@@ -4,7 +4,7 @@ description: >-
   강의 실습 전 준비 및 HTML, CSS, Javascript의 기초 이해를 위한 실습.
 author: gisoun
 date: 2025-07-04 10:05:00 +0900
-categories: [Hancom, Education]
+categories: [Hancom AI Academy, Education]
 tags: [hancom, hancom ai academy, education, ai, html, css, javascript, js]
 pin: false
 media_subpath: '/assets/posts/20250704'
