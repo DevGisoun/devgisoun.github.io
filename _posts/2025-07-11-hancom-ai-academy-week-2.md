@@ -1,7 +1,7 @@
 ---
 title: "[스나이퍼팩토리] 한컴AI 2기 - 교육 2주차 후기"
 description: >-
-  2주차
+  React의 기초 개념과 Hooks 이해를 위한 실습.
 author: gisoun
 date: 2025-07-11 22:05:00 +0900
 categories: [Hancom AI Academy, Education]
@@ -55,7 +55,7 @@ React는 이러한 SPA를 구축하는 데 매우 효과적인 Javascript 라이
 
 **`useState`**는 함수형 컴포넌트에서 **상태(state)**를 관리할 수 있게 해주는 가장 기본적인 Hook입니다. useState를 호출하면 튜플을 반환하는데, **첫 번째 요소는 현재 상태 값**이고 **두 번째 요소는 그 상태 값을 업데이트하는 함수**입니다. 또한 **`useState`** 함수의 인자로 상태의 기본값을 설정할 수 있습니다.
 
-```typescript
+```
 // 'name' 상태 변수와 그 값을 변경할 setName 함수를 선언.
 // 초기값: '기순'.
 const [name, setName] = useState<string>('기순');
@@ -96,13 +96,19 @@ return (
 );
 ```
 
+![image](useState-1.png)
+_각각 '기순', 'DevGisoun'으로 초기화된 'input'과 텍스트_
+
+![image](useState-2.png)
+_'input' 에 입력된 'name' 상태값을 변경하자 동시에 변경된 텍스트_
+
 ### useEffect
 
 **`useEffect`**는 컴포넌트가 렌더링될 때마다 특정 작업을 수행하도록 설정할 수 있는 Hook입니다. 데이터 가져오기(fetching), DOM 조작 등 다양한 **부수 효과(Side Effect)**를 처리하는 데 사용됩니다.
 
 **`useEffect`**는 **첫 번째 인자로 실행할 함수**를 받고, **두 번째 인자로 의존성 배열(Dependency Array)**을 받습니다. 이 의존성 배열에 포함된 값 중 하나라도 변경될 때마다 첫 번째 인자로 전달한 함수가 실행됩니다. 만약 빈 배열 []을 전달하면, 컴포넌트가 처음 마운트될 때 한 번만 실행됩니다.
 
-```typescript
+```
 const [name, setName] = useState<string>('');
 const [nickname, setNickname] = useState<string>('');
 
@@ -135,11 +141,17 @@ useEffect(() => {
 }, [name]);
 ```
 
+![image](useEffect-1.png)
+_'name', 'nickname' 에 대한 'input' 컴포넌트와 '보이기' 버튼 컴포넌트_
+
+![image](useEffect-2.png)
+_'보이기' 버튼 컴포넌트를 클릭하니 나타나는 텍스트 컴포넌트 및 변경된 버튼 텍스트_
+
 ### useMemo
 
 **`useMemo`** 는 계산 비용이 큰 함수의 결과값을 메모리에 기억하게 하는 **메모이제이션(Memoization) 을 하여**, 의존성 배열의 값이 변경될 때만 해당 함수를 다시 실행하도록 하는 Hook입니다. **`useMemo`** 를 통해 불필요한 연산을 줄여 애플리케이션의 성능을 최적화할 수 있습니다.
 
-```typescript
+```
 // 평균값을 계산하는 함수.
 const getAverage = (numbers: number[]) => {
     // 호출 시점을 확인하기 위해 console.log를 사용.
@@ -199,7 +211,7 @@ export default Average;
 
 **`useCallback`**은 useMemo와 유사하지만, 함수의 결과값이 아닌 함수 자체를 메모이제이션하는 데 사용되는 Hook입니다. 자식 컴포넌트에 props로 함수를 전달할 때, 부모 컴포넌트가 리렌더링되어도 불필요하게 함수가 재생성되는 것을 방지하여 자식 컴포넌트의 불필요한 리렌더링을 막아줍니다.
 
-```typescript
+```
 const getAverage = (numbers: number[]) => {
     console.log('평균값 계산 중...');
 
@@ -259,7 +271,7 @@ export default Callback;
 
 **`useRef`**는 **`.current`** 프로퍼티를 가진 변경 가능한 ref 객체를 반환하는 Hook입니다. 이 객체는 컴포넌트의 전체 생명주기 동안 유지되며, 주로 DOM 요소에 직접 접근하거나 리렌더링을 유발하지 않는 값을 저장하는 데 사용됩니다.
 
-```typescript
+```
 const getAverage = (numbers: number[]) => {
     if (numbers.length === 0) return 0;
 
@@ -321,6 +333,12 @@ function Ref() {
 
 export default Ref;
 ```
+
+![image](useRef-1.png)
+_아무런 반응 없는 'input' 컴포넌트_
+
+![image](useRef-2.png)
+_'등록' 버튼을 클릭하자 'input' 컴포넌트의 current 프로퍼티에 접근하여 Focus 상태로 변경_
 
 ---
 
