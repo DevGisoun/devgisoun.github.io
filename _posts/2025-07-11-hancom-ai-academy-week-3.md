@@ -85,6 +85,84 @@ published: true
 
 1. 우선 아래와 같이 이메일, 패스워드 기반 회원가입 Form 을 제작하였습니다.
 
+   ![image](sign-up-1.png)
+   _회원가입 Form_
+
+   이때, <kbd>회원가입</kbd> 버튼 클릭 시 아래의 Submit 핸들러가 실행되게 하였습니다.
+
+   ```typescript
+   const handleSignUp = async () => {
+        const email = formData.account.email;
+        const password = formData.account.password;
+        try {
+            // Supabase 이메일 인증 요청 및 회원가입 코드.
+            const { data } = await supabase.auth.signUp({
+                email,
+                password,
+            });
+            if (data.user) {
+                toast.success('회원가입이 완료되었습니다.');
+                navigate('/login');
+            }
+        } catch (error: any) {
+            console.error(`회원가입 중 오류가 발생했습니다: ${error.message}`);
+            throw new Error('회원가입 중 오류가 발생했습니다.');
+        }
+    };
+   ```
+
+2. 해당 Form에 이메일, 패스워드를 입력한 후 <kbd>회원가입</kbd> 버튼을 클릭하여 Supabase 이메일 인증 링크를 전송 받습니다.
+
+   ![image](sign-up-2.png)
+   _이메일 인증_
+   
+   해당 메일의 **'Confirm your mail'** 을 클릭하여 이메일 인증 및 회원가입을 마칩니다.
+
+---
+
+## 로그인 기능 구현하기
+
+1. 이어서 아래와 같은 이메일, 패스워드 기반 로그인 Form을 제작하였습니다.
+
+   ![image](login-1.png)
+   _로그인 Form_
+
+   이때, <kbd>로그인</kbd> 버튼 클릭 시 아래의 Submit 핸들러가 실행되게 하였습니다.
+
+   ```typescript
+   const handleSignIn = async (values: z.infer<typeof formSchema>) => {
+       const email = values.email;
+       const password = values.password;
+       try {
+           // Supabase 이메일 인증 요청 및 회원가입 코드.
+           const { data } = await supabase.auth.signInWithPassword({
+               email,
+               password,
+           });
+           const user = data.user;
+           console.log(user);
+           if (user) {
+               setUser(user);
+               navigate('/');
+           } else {
+               toast('사용자 정보를 불러올 수 없습니다.');
+           }
+       } catch (error: any) {
+           console.error(error.message);
+           throw new Error('로그인에 실패하였습니다.');
+       }
+   };
+   ```
+
+2. 해당 Form에 이메일, 패스워드를 입력한 후 <kbd>로그인</kbd> 버튼을 클릭하였고 인증 및 로그인이 성공적으로 되었는지 확인하기 위해 개발자 도구 콘솔창을 열어 확이하였습니다.
+
+   ![image](login-2.png)
+   _인증 및 로그인 후 개발자 도구 콘솔창_
+   
+   인증 및 로그인이 성공적으로 된 것을 확인할 수 있었습니다!
+
+3. 
+
 ---
 
 본 후기는 [한글과컴퓨터x한국생산성본부x스나이퍼팩토리] 한컴 AI 아카데미 2기 (B-log) 리뷰로 작성 되었습니다.
