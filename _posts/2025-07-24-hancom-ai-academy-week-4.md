@@ -3,7 +3,7 @@ title: "[스나이퍼팩토리] 한컴AI 2기 - 교육 4주차 후기"
 description: >-
   Typescript 기반 React 를 활용한 팀 프로젝트 진행.
 author: gisoun
-date: 2025-07-25 22:05:00 +0900
+date: 2025-07-24 17:05:00 +0900
 categories: [Hancom AI Academy, Education]
 tags: [hancom, hancom ai academy, education, ai, html, css, javascript, js]
 pin: false
