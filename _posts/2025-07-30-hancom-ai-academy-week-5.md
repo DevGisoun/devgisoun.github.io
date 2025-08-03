@@ -8,7 +8,7 @@ categories: [Hancom AI Academy, Education]
 tags: [hancom, hancom ai academy, education, ai, html, css, javascript, js]
 pin: false
 media_subpath: '/assets/posts/20250801'
-published: false
+published: true
 ---
 
 > 2025\. 7\. 28\. ~ 2025\. 8\. 1\.
@@ -28,11 +28,69 @@ published: false
 ![image](github-projects-1.png)
 _Github Projects 페이지에서 등록한 각자 맡은 역할에 대한 Issues_
 
-팀원들 각자의 역할을 간편하게 **`Issues`** 에 작성하고 이를 진행 상황에 따른 컬럼에 블록처럼 배치하여 관리되다 보니 프로젝트의 전체적인 척도 파악과 **`Comments`** 를 통한 피드백 소통이 원활하게 진행되어
+팀원들 각자의 역할을 쉽고 빠르게 **`Issues`** 에 작성하고 이를 적절한 진행 상황 컬럼에 블록처럼 배치하여 관리하니 프로젝트의 전체적인 척도 파악과 **`Comments`** 를 통한 피드백 소통이 원활하게 이루어질 수 있었습니다.
 
 ---
+## any 대신 interface로 타입 정의
 
-## interface를 통한 객체 타입 지정
+프로젝트 규모가 커지고 기능이 복잡해질수록, 우리가 다루는 데이터의 구조를 명확하게 정의하는 것이 매우 중요해집니다. 지금까지는 단순히 개발 속도를 위해 Supabase에서 받아온 데이터에 **`any`** 타입을 사용했지만, 사실 이는 TypeScript의 가장 큰 장점인 **타입 안정성**을 포기하는 것과 같습니다.
+
+개발자 입장에서 **`any`** 타입은 당장은 편할지 몰라도, 예상치 못한 버그를 만들고 팀원들 간 코드를 이해하기 어렵게 만드는 원인이 될 수 있습니다. 때문에 규모가 더 커지기 전에 **`interface`** 를 사용해 데이터 객체의 형태를 명확히 정의하고 안전하게 만들어 보았습니다.
+
+### 데이터 모델을 위한 interface 정의
+
+저의 경우, Supabase 데이터베이스 테이블 구조에 맞춰 **`interface`**를 생성하였습니다.
+
+**[/src/types/form.ts]**
+```ts
+// 'forms' 테이블의 구조를 interface 로 정의.
+export interface FormData {
+  id: string;
+  user_id: string;
+  title: string;
+  description: string;
+  
+  // ...
+  
+  start_time?: Date | null; // 설문 시작일 (선택적)
+  end_time?: Date | null;   // 설문 종료일 (선택적)
+}
+```  
+
+**[/src/types/question.ts]**
+```ts
+import type { Answer } from "./answer";
+import type { Option } from "./option";
+
+// 'questions' 테이블과 그와 관련된 데이터 구조를 interface 로 정의.
+export interface QuestionData {
+  id: string;
+  form_id: string;
+  text: string;
+  type: string;
+  
+  // ...
+  
+  // Partial<T> 유틸리티 타입을 사용해 Option, Answer 의 모든 필드가 필수가 아님을 명시.
+  options?: Partial<Option>[];
+  answers?: Partial<Answer>[];
+}
+```  
+
+위와 같이 `**FormData (forms 테이블)**`, `**QuestionData (questions 테이블)**`, `**Option (options 테이블)**`, `**Answer (answers 테이블)**` 등 각 데이터의 구조를 `**interface**`로 정의하면, 이 데이터들이 애플리케이션 내에서 어떤 형태를 가져야 하는지 명확하게 알 수 있습니다.
+
+### 실제 타입 적용 예시
+
+이렇게 정의한 `**interface**`를 실제 코드에 적용해 `**any**` 로 부터 교체 작업을 하였습니다.  
+
+#### **`useState`**의 제네릭 타입 명시
+
+먼저, 컴포넌트가 다루는 **상태(State)**의 타입을 명확히 지정했습니다.
+
+- 기존 코드
+  
+- 수정 코드
+
 
 ---
 
