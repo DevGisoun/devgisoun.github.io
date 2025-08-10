@@ -5,7 +5,7 @@ description: >-
 author: gisoun
 date: 2025-08-04 17:05:00 +0900
 categories: [Hancom AI Academy, Education]
-tags: [hancom, hancom ai academy, education, ai, typescript, ts, react, react-native, rn]
+tags: [hancom, hancom ai academy, education, ai, typescript, ts, react, react native, rn]
 pin: false
 media_subpath: '/assets/posts/20250808'
 published: false
@@ -15,7 +15,7 @@ published: false
 
 ---
 
-## 팀 프로젝트
+## React Native
 
 ---
 
