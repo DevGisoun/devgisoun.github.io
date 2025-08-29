@@ -8,7 +8,7 @@ categories: [Hancom AI Academy, Education]
 tags: [hancom, hancom ai academy, education, ai, nodejs]
 pin: false
 media_subpath: '/assets/posts/20250829'
-published: true
+published: false
 ---
 
 > 2025\. 8\. 25\. ~ 2025\. 8\. 29\.
